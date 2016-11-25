@@ -34,16 +34,15 @@ export default class Article extends Component {
   render() {
     console.log(this.props.article)
     var article = this.props.article;
+    var width = Dimensions.get('window').width - 10
 
-    var body = "<html><body><style>body { font-family: 'Helvetica'}</style>";
+    var body = "<html><body><style>body { font-family: 'Helvetica'} img { width: " + width + "px }</style>";
 
     for (var i = 1; i < article.body.length; i++) {
       body += article.body[i].data
     }
 
     body += "</body></html>";
-    console.log(body)
-    console.log(Dimensions.get('window'))
 
     return (
       <Content>
@@ -58,7 +57,7 @@ export default class Article extends Component {
             onNavigationStateChange={(e) => this._updateWebViewHeight(e)}
             startInLoadingState={true}
             scalesPageToFit={true}
-            style={{width: Dimensions.get('window').width - 10, height: this.state.webViewHeight}}/>
+            style={{width: width, height: this.state.webViewHeight}}/>
       </Content>
     );
   }
