@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-} from 'react-native';
-import {
-  StackNavigation,
-  DrawerNavigation,
-  DrawerNavigationItem,
-} from '@exponent/ex-navigation';
+import { StyleSheet, View, Text, Image } from 'react-native';
+import { StackNavigation, DrawerNavigation, DrawerNavigationItem } from '@exponent/ex-navigation';
+
 import { Router } from './routing';
 
 export default class Navigation extends Component {

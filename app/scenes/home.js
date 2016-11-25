@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import {
   View,
   StyleSheet,
-  Text
+  Text,
+  Contain
 } from 'react-native';
 
+import { Content } from 'native-base'
+
+import { ArticleListView } from '../components/ArticleListView'
 import { Router } from '../routing';
 
 export default class Home extends Component {
@@ -13,27 +17,13 @@ export default class Home extends Component {
     * screen. For example, in addition to the navigationBar title we
     * could add backgroundColor.
     */
-  static route = {
-    navigationBar: {
-    },
-  }
-
-  _goToScreen = name => () => {
-    this.props.navigator.push(Router.getRoute(name));
-  }
+  static route = {}
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>{this.props.route.params.service}</Text>
-      </View>
+      <Content padder>
+        <ArticleListView service={this.props.route.params.service} router={Router}/>
+      </Content>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fafafa',
-  },
-});

@@ -1,9 +1,9 @@
-import HomeScene from './scenes/home';
+import { createRouter } from '@exponent/ex-navigation';
 
-import {
-  createRouter,
-} from '@exponent/ex-navigation';
+import HomeScene from './scenes/home';
+import ArticleScene from './scenes/article';
 
 export const Router = createRouter(() => ({
-  main: (ble) => HomeScene,
+  main: () => HomeScene,
+  article: () => ArticleScene,
 }));
