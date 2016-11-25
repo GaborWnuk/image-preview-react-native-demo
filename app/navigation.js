@@ -13,9 +13,8 @@ import {
 import { Router } from './routing';
 
 export default class Navigation extends Component {
-
   _renderHeader = () => {
-    return <Image source={require('../assets/sparkles.jpg')} style={styles.header} />;
+    return <Image source={require('../assets/mtcook.jpg')} style={styles.header} />;
   };
 
   _renderTitle = (text: string, isSelected: bool) => {
@@ -46,30 +45,14 @@ export default class Navigation extends Component {
         <DrawerNavigationItem
           id="main"
           selectedStyle={styles.selectedItemStyle}
-          renderTitle={isSelected => this._renderTitle('gwiazdy.wp.pl', isSelected)}
-          renderIcon={isSelected => this._renderIcon('md-apps', isSelected)}>
-          <StackNavigation
-            id="root"
-            defaultRouteConfig={{
-              navigationBar: {
-                backgroundColor: '#0084FF',
-                tintColor: '#fff',
-              },
-            }}
-            initialRoute={Router.getRoute('main')}
-          />
-        </DrawerNavigationItem>
-        <DrawerNavigationItem
-          id="another"
-          selectedStyle={styles.selectedItemStyle}
-          renderTitle={isSelected => this._renderTitle('tech.wp.pl', isSelected)}
-          renderIcon={isSelected => this._renderIcon('md-alert', isSelected)}>
+          renderTitle={isSelected => this._renderTitle('#dziejesienazywo', isSelected)}>
           <StackNavigation
             id="about"
             defaultRouteConfig={{
               navigationBar: {
                 backgroundColor: '#FF0000',
                 tintColor: '#fff',
+                'title': '#dziejesienazywo'
               },
             }}
             initialRoute={Router.getRoute('main')}
@@ -90,7 +73,7 @@ const styles = StyleSheet.create({
   buttonTitleText: {
     color: '#222',
     fontWeight: 'bold',
-    marginLeft: 18,
+    marginLeft: 0,
   },
   icon: {
     color: '#999',
