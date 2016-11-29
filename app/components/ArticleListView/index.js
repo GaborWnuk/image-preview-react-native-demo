@@ -4,15 +4,15 @@
  * @flow
  */
 
-import React, { Component, renderToString } from 'react';
-import { Container, List, Content, Card, CardItem, Thumbnail, Text, Button, Icon } from 'native-base';
-import { withNavigation } from '@exponent/ex-navigation';
+import React, { Component, renderToString } from 'react'
+import { Container, List, Content, Card, CardItem, Thumbnail, Text, Button, Icon } from 'native-base'
+import { withNavigation } from '@exponent/ex-navigation'
 
 import { ImagePreview } from '../ImagePreview'
 
-import { Router } from '../../routing';
+import { Router } from '../../routing'
 
-var TimeAgo = require('react-native-timeago');
+import TimeAgo from 'react-native-timeago'
 
 export class ArticleListView extends Component {
   constructor(props) {

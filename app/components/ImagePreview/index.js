@@ -14,8 +14,6 @@ export class ImagePreview extends Component {
   render() {
       var imagePreview = new B64ImagePreview(this.props.b64)
 
-      console.log(this.props.b64)
-      console.log(imagePreview.imageSource)
       return <ProgressiveImage
               thumbnailSource={{ uri: imagePreview.imageSource }}
               imageSource={{ uri: this.props.source }}
