@@ -3,5 +3,9 @@ language: objective-c
 osx_image: xcode8
 
 install:
-  - npm install
+  - rm -Rf "${TMPDIR}/jest_preprocess_cache"
+  - brew install imagemagick
+  - wget https://github.com/yarnpkg/yarn/releases/download/v0.17.9/yarn-0.17.9.js
+  - export yarn="node $(pwd)/yarn-0.17.9.js"
+  - $yarn install
   - npm test
