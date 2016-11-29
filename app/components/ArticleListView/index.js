@@ -27,23 +27,24 @@ export class ArticleListView extends Component {
     this.fetchData();
   }
 
-  fetchData() {
-    // This is just an example, so we'll use static url
+  async fetchData() {
     var REQUEST_URL = 'http://37.233.102.67:5000/graphql';
+    try {
+      let response = await fetch(REQUEST_URL, {
+                                  method: 'POST',
+                                  headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+                                  body: JSON.stringify({ query: '{ articles(service: [' + this.props.service + '], t: [Article]) { id title ts img { b64 url } body { data }}}' })
+                                });
 
-    fetch(REQUEST_URL, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: '{ articles(service: [' + this.props.service + '], t: [Article]) { id title ts img { b64 url } body { data }}}' })
-      })
-      .then((response) => response.json())
-      .then((responseData) => {
-        this.setState({
-          articles: responseData.data.articles,
-          loaded: true,
-        });
-      })
-      .done();
+      let responseData = await response.json();
+
+      this.setState({
+        articles: responseData.data.articles,
+        loaded: true,
+      });
+    } catch(error) {
+      console.log(error);
+    }
   }
 
   render() {
