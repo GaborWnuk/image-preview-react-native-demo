@@ -3,4 +3,5 @@ language: objective-c
 osx_image: xcode8
 
 install:
+  - npm install
   - npm test
