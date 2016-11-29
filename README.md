@@ -7,7 +7,7 @@ Demonstration implementation of Image Preview technique - to achieve fast image 
 Mechanism was described by [Facebook in August 2015](https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/).
 
 ## Installation
-Demo is based on (at least)[React Native 0.38](https://facebook.github.io/react-native/) and dependencies described in `package.json` file.
+Demo is based on [React Native 0.38](https://facebook.github.io/react-native/) (at least) and dependencies described in `package.json` file.
 
 Build is pretty straightforward:
 
