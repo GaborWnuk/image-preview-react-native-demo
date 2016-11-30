@@ -17,6 +17,7 @@ Article.schema = {
         id: {type: 'string'},
         title: {type: 'string'},
         ts: {type: 'int'},
-        body: {type: 'list', objectType: 'Body'}
+        body: {type: 'list', objectType: 'Body'},
+        img: {type: 'Img'}
     },
 };
