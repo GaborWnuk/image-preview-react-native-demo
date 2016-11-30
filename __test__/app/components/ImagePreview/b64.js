@@ -6,7 +6,7 @@ import { expect } from 'chai';
 
 var im = require('imagemagick');
 
-import { B64ImagePreview } from '../app/components/ImagePreview/b64'
+import { B64ImagePreview } from '../../../../app/components/ImagePreview/b64'
 
 describe('base64 to Image', function () {
     describe('Create proper Image from headless base64', function () {

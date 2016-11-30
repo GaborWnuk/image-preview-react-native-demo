@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "mocha --require react-native-mock/mock.js --compilers js:babel-core/register  --recursive __test__/*.js"
+    "test": "mocha --require react-native-mock/mock.js --compilers js:babel-core/register  --recursive __test__/**/*.js"
   },
   "dependencies": {
     "@exponent/ex-navigation": "^2.1.3",
