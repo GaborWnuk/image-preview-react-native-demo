@@ -16,7 +16,8 @@
     "react": "15.3.2",
     "react-native": "0.38.0",
     "react-native-progressive-image": "^1.0.4",
-    "react-native-timeago": "^0.3.0"
+    "react-native-timeago": "^0.3.0",
+    "realm": "^0.15.0"
   },
   "devDependencies": {
     "babel-jest": "17.0.2",
